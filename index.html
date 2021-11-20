@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images\formula.png">
+	<link rel="stylesheet" type = "text/css" href="css/html5reset.css">
+	<link rel="stylesheet" type = "text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Exo:wght@400&display=swap">
+	<title>Formula 1</title>
+</head>
+<body>
+	<a class = "skip" href="#skip">Skip to Main Content</a>
+		<header>
+		<img src="images/logo.png" style="width:7em; height:2em;" alt="logo" id = "logo">
+		<nav>
+			<ul class="nav_links">
+				<li class="current"><a href = "index.html">Calendar</a></li>
+				<li><a href = "grid.html">The Grid</a></li>
+				<li><a href = "clasification.html">Clasification</a></li>
+				<li><a href = "2022.html">Future</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main id = skip>
+		<h1>Calendar and Countdown</h1>
+		<p>Right now the Qatar GP is taking place, but here we have the countdown to the next race: Saudi Arabia!</p>
+		<!--THE FOLLOWING CODE CORRESPONDS TO THE COUNTDOWN AND
+		WAS RETRIEVED FROM https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown-->
+		<p id="demo"></p>
+		<script>
+		var countDownDate = new Date("Dec 5, 2021 12:30:00").getTime();
+		var x = setInterval(function() {
+		var now = new Date().getTime();
+		var distance = countDownDate - now;
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+		+ minutes + "m " + seconds + "s ";
+		if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("demo").innerHTML = "DONE";}
+		}, 1000);
+		</script>
+		<!--THE CODE ABOVE WAS RETRIEVED FROM W3SCHOOLS (YOU CAN SEE THE LINK) AND CORRESPONDS TO THE COUNTDOWN-->
+
+		<p>End of the season is just around the corner... only 2 races left<br> Here you have the calendar:</p>
+		<div id="lastraces">
+			<p id="saudi">Get up to speed with everything you need to know about the 2021 <a href = "https://www.formula1.com/en/racing/2021/Saudi_Arabia.html" style="text-decoration:underline;">Saudi Arabia Grand Prix</a>, which takes place at the brand-new Jeddah Corniche Circuit on Sunday, December 5.</p>
+			<p id="uae">Get up to speed with everything you need to know about the 2021 <a href = "https://www.formula1.com/en/racing/2021/United_Arab_Emirates.html" style="text-decoration:underline;">United Arab Emirates Grand Prix</a>, which takes place over 55 laps of the 5.281-kilometre Yas Marina Circuit on Yas Island on Sunday, December 12.</p> 
+	   </div>
+		<br>
+		<p>What will you do after the season ends? Next season will start on March. If you are from Ann Arbor and you don't want to wait so long to follow racing again we suggest you go to this location below... It's a very nice karting track to have some fun until the start of the season!</p>
+		<div class="map-responsive">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11767.57993513039!2d-83.4837376!3d42.4937852!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc2a8fc6f395c778!2sFull%20Throttle%20Adrenaline%20Park!5e0!3m2!1sen!2sus!4v1637363248243!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+	</main>
+
+	<footer>
+		<p>Sergio Ferreras &copy; 2021</p>
+	</footer>
+</body>
+</html>

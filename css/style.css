@@ -1,0 +1,234 @@
+body{
+	margin:1%;
+	padding:1%;
+	font-size:150%;
+	font-family: 'Exo', sans-serif;
+	background-color: rgb(247, 234, 212);
+}
+
+a.skip{
+    background: deeppink;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -50px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+
+header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1{ 
+	font-size: xx-large;
+	font-weight: bold;
+	text-align: center;
+	color: deeppink;
+}
+
+#saudi {
+	border: 5px solid #77FB9A;
+	height:auto;
+	float: left;
+	width: 45%;
+  }
+
+#uae {
+	border: 5px solid #77FB9A;
+	height: auto;
+	float: right;
+	width: 45%;
+  }
+
+#lastraces{
+	display: flex;
+	justify-content: space-around;
+}
+/*Style the images*/
+/*----------
+div{
+	width: 90%;
+	margin: 0 auto;
+	display:grid;
+	gap:10px;
+	grid-template-columns: 1fr;
+	border: 5px solid rgba(138, 208, 255, 0.623);
+}
+
+img{
+	width:100%;
+	filter:grayscale(85%);
+	position:relative;
+	
+
+    transition-property: filter, border-radius, border; 
+  	transition-duration: 1s;
+  	transition-timing-function: linear;
+
+ 	animation-name: slidein;
+  	animation-duration: 4s; 
+
+}
+-----*/
+
+img{
+	display: block;
+	filter: grayscale(100%);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*Make the h2 heading match h1*/
+h2{
+	font-size: xx-large; 
+	font-weight: bold;
+}
+
+/*Improve the spacing for paragraphs AND headings*/
+p, h1, h2 {
+    padding: 10px;
+	color:black;
+}
+
+/*Add borders around the main components and some
+space too*/
+header, nav, main, h1, footer{
+	margin: 10px 0px;
+	width: 100%;
+}
+nav li{
+	background-color:  #C5FB77;
+	padding:10px;
+	width:100%;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+}
+nav{
+	position: sticky;
+}
+
+.nav_links{
+	/*Your code here again.*/
+	display: flex;
+	flex-direction: column;
+  }
+
+nav li:hover {
+	font-style: italic;
+	text-transform: uppercase;
+	background-color: #94faaf;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+
+nav .current{
+	text-transform: uppercase;
+	font-style: italic;
+	background-color: #77FB9A;
+}
+
+.container{
+	display: grid;
+	padding: 20px;
+	border: 5px solid #C5FB77;
+	grid-template-columns: auto;
+	text-align: center;
+	background-color: white;
+}
+
+.container > div{
+    overflow: hidden;
+} 
+.colhead{
+	background-color:wheat;
+	padding: 10px;
+	color: black;
+}
+table,td,th{
+	border: 2px solid black;
+	height: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	padding: auto;
+	text-align: center;
+}
+caption{
+	color: black;
+	font-weight: 900;
+}
+tr:nth-child(odd) {
+	background-color:wheat;
+	color: black;
+  }
+  tr:nth-child(even) {
+	background-color: transparent;
+	color:black;
+  }
+  
+  footer{
+	  text-align: center;
+	  min-height: 30px;
+  }
+
+  .map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+  @media screen and (min-width: 760px) {
+	.nav_links{
+		/*Your code here again.*/  
+		flex-direction: row;
+	  }  
+	.container{
+		grid-template-columns: auto auto;
+	}
+  }
+
+  @media screen and (min-width: 1120px) {
+
+	.nav_links{
+		/*Your code here again.*/  
+		flex-direction: row;
+	  }
+	.container{
+		grid-template-columns: auto auto auto auto auto;
+	}
+	  /*the code from here onwards displays the two tables side by side*/
+	* {
+		box-sizing: border-box;
+	}
+	.row {
+		display: flex;
+		margin-left:-5px;
+		margin-right:-5px;
+	} 
+	.column {
+		flex: 50%;
+		padding: 5px;
+	}
+  }
